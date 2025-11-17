@@ -1,0 +1,38 @@
+name: domain
+description: "A new Flutter package project."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  freezed_annotation: ^3.1.0
+  injectable: ^2.5.1
+  shared:
+    git:
+      url: https://github.com/CodeHiSmile/shared
+      ref: main
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.10.3
+  json_serializable: ^6.11.1
+  flutter_gen_runner: ^5.12.0
+  freezed: ^3.2.3
+  injectable_generator: ^2.7.0
+  logging: ^1.3.0
+  mocktail: ^1.0.4
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
