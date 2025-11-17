@@ -2,6 +2,9 @@ name: domain
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+repository: https://github.com/CodeHiSmile/domain
+issue_tracker: https://github.com/CodeHiSmile/domain/issues
+documentation: https://github.com/CodeHiSmile/domain
 
 environment:
   sdk: ^3.10.0
