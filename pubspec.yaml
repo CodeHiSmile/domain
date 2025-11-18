@@ -15,11 +15,15 @@ dependencies:
     sdk: flutter
 
   freezed_annotation: ^3.1.0
+  get_it: ^9.0.5
   injectable: ^2.5.1
   shared:
-    git:
-      url: https://github.com/CodeHiSmile/shared
-      ref: main
+    path: ../shared
+
+#  shared:
+#    git:
+#      url: https://github.com/CodeHiSmile/shared
+#      ref: main
 
 dev_dependencies:
   flutter_test:

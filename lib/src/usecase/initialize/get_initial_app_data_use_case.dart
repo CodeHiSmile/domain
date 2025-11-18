@@ -1,0 +1,45 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
+import 'package:shared/shared.dart';
+
+import '../../../domain.dart';
+
+part 'get_initial_app_data_use_case.freezed.dart';
+
+@Injectable()
+class GetInitialAppDataUseCase
+    extends BaseSyncUseCase<GetInitialAppDataInput, GetInitialAppDataOutput> {
+  const GetInitialAppDataUseCase(this._repository);
+
+  final Repository _repository;
+
+  @protected
+  @override
+  GetInitialAppDataOutput buildUseCase(GetInitialAppDataInput input) {
+    return GetInitialAppDataOutput(
+      isDarkMode: _repository.isDarkMode,
+      isLoggedIn: _repository.isLoggedIn,
+      languageCode: _repository.languageCode,
+    );
+  }
+}
+
+@freezed
+abstract class GetInitialAppDataInput extends BaseInput
+    with _$GetInitialAppDataInput {
+  const factory GetInitialAppDataInput() = _GetInitialAppDataInput;
+
+  const GetInitialAppDataInput._();
+}
+
+@freezed
+abstract class GetInitialAppDataOutput extends BaseOutput
+    with _$GetInitialAppDataOutput {
+  const GetInitialAppDataOutput._();
+
+  const factory GetInitialAppDataOutput({
+    @Default(false) bool isLoggedIn,
+    @Default(false) bool isDarkMode,
+    @Default(LanguageCode.vi) LanguageCode languageCode,
+  }) = _GetInitialAppDataOutput;
+}
