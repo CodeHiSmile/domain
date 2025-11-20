@@ -8,6 +8,7 @@ export 'src/models/enums/language_code.dart';
 export 'src/repository/repository.dart';
 
 export 'src/models/param/base/pageable.dart';
+export 'src/models/enums/load_status.dart';
 
 export 'src/usecase/base/base_use_case.dart';
 export 'src/usecase/base/future/base_future_use_case.dart';
