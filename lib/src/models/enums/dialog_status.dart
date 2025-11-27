@@ -1,0 +1,1 @@
+enum DialogStatus { success, error, information }
