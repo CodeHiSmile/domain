@@ -6,6 +6,8 @@ export 'src/models/entity/entity.dart';
 
 export 'src/repository/repository.dart';
 
+export 'src/interface/config/environment_config.dart';
+
 export 'src/interface/navigation/base_bottom_sheet.dart';
 export 'src/interface/navigation/base_dialog.dart';
 export 'src/interface/navigation/base_navigator.dart';
