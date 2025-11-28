@@ -15,9 +15,12 @@ abstract class Repository {
 
   LanguageCode get languageCode;
 
-  Future<void> logout();
+  Future<void> saveToken({
+    required String accessToken,
+    required String refreshToken,
+  });
 
-  Future<void> clearCurrentUserData();
+  Future<void> deleteAllToken();
 
   Future<bool> saveIsFirstLogin(bool isFirstLogin);
 
@@ -27,9 +30,5 @@ abstract class Repository {
 
   Future<bool> saveLanguageCode(LanguageCode languageCode);
 
-  Future<void> saveAccessToken(String accessToken);
-
   Future registerFirebaseToken();
-
-  Future deleteAccount();
 }

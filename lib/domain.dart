@@ -25,4 +25,7 @@ export 'src/usecase/base/stream/base_stream_use_case.dart';
 export 'src/usecase/base/sync/base_sync_use_case.dart';
 
 export 'src/usecase/auth/is_logged_in_use_case.dart';
+export 'src/usecase/auth/save_token_use_case.dart';
+export 'src/usecase/auth/detele_token_use_case.dart';
+
 export 'src/usecase/initialize/get_initial_app_data_use_case.dart';

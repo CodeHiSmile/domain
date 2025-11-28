@@ -2,8 +2,6 @@ import 'package:domain/domain.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
-part 'is_logged_in_use_case.freezed.dart';
-
 @Injectable()
 class IsLoggedInUseCase
     extends BaseSyncUseCase<IsLoggedInInput, IsLoggedInOutput> {
@@ -18,17 +16,12 @@ class IsLoggedInUseCase
   }
 }
 
-@freezed
-abstract class IsLoggedInInput extends BaseInput with _$IsLoggedInInput {
-  const factory IsLoggedInInput() = _IsLoggedInInput;
-
-  const IsLoggedInInput._();
+class IsLoggedInInput extends BaseInput {
+  const IsLoggedInInput();
 }
 
-@freezed
-abstract class IsLoggedInOutput extends BaseOutput with _$IsLoggedInOutput {
-  const IsLoggedInOutput._();
+class IsLoggedInOutput extends BaseOutput {
+  final bool? isLoggedIn;
 
-  const factory IsLoggedInOutput({@Default(false) bool isLoggedIn}) =
-      _IsLoggedInOutput;
+  const IsLoggedInOutput({this.isLoggedIn});
 }
