@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared/shared.dart';
 
 enum LanguageCode {
@@ -12,6 +13,10 @@ enum LanguageCode {
   final String serverValue;
 
   static LanguageCode fromLocale() {
+    if (kIsWeb) {
+      return LanguageCode.vi;
+    }
+
     final code = Platform.localeName.split('_').firstOrNull ?? '';
     if (code.toLowerCase() == 'vi') {
       return LanguageCode.vi;
