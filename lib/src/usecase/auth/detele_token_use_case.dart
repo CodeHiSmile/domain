@@ -18,9 +18,4 @@ class DeleteTokenUseCase
 
 class DeleteTokenOutput extends BaseOutput {}
 
-class DeleteTokenInput extends BaseInput {
-  final String accessToken;
-  final String refreshToken;
-
-  DeleteTokenInput({required this.accessToken, required this.refreshToken});
-}
+class DeleteTokenInput extends BaseInput {}

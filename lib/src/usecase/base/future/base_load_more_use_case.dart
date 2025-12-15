@@ -31,9 +31,9 @@ abstract class BaseLoadMoreUseCase<Input extends BaseInput, Output>
   int get offset => _output.offset;
 
   Future<LoadMoreOutput<Output>> execute(
-    Input input,
-    bool isInitialLoad,
-  ) async {
+    Input input, {
+    bool isInitialLoad = true,
+  }) async {
     try {
       if (isInitialLoad) {
         _output = LoadMoreOutput<Output>(
